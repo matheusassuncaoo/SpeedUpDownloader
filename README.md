@@ -1,4 +1,4 @@
-# SpeedUpDownloader 🚀
+# SpeedUpDownloader v0.1 🚀
 
 SpeedUpDownloader é um aplicativo inovador que permite baixar vídeos e músicas de várias plataformas populares como YouTube, TikTok, Instagram e Facebook. Com suporte para uma variedade de formatos de arquivo, tamanhos e qualidades, o SpeedUpDownloader é a solução definitiva para todas as suas necessidades de download.
 
