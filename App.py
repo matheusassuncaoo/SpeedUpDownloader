@@ -2,6 +2,7 @@ import customtkinter
 from pytube import YouTube
 from tkinter import messagebox
 import os
+import threading
 
 # Constantes
 SUPPORTED_PLATFORMS = ["YouTube", "TikTok", "Instagram", "Facebook"]
@@ -52,8 +53,12 @@ def baixar_video():
         download_manager.set_link(link)
         formato = archive_options.get()
         resolucao = video_options.get()
-        download_manager.download(formato, resolucao)
-        messagebox.showinfo("Sucesso", "Download concluído com sucesso!")
+        download_manager.set_platform(platform_options.get())
+
+        thread = threading.Thread(target=download_manager.download, args=(formato, resolucao))
+        thread.start()
+
+        messagebox.showinfo("Sucesso", "Download iniciado com sucesso!")
     except Exception as e:
         messagebox.showerror("Erro", str(e))
 
