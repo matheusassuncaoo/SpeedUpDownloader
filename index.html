@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Speed Up Downloader v1</title>
+</head>
+<body>
+    <!-- Navbar -->
+     <nav>
+        <h1>SpeedUpDownloader</h1>
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html">Youtube Downloader</a></li>
+            <li><a href="./index.html">Tiktok Downloader</a></li>
+            <li><a href="./index.html">MP3 Downloader</a></li>
+        </ul>
+     </nav>
+    <!-- Fim da Navbar -->
+
+    <!-- Main Content -->
+    <main>
+         <form action="download.php" method="post">
+            <label for="link">Insira o link:</label>
+            <input type="text" id="link" name="link" placeholder="Cole o link aqui..." required>
+            
+            <label for="format">Selecione o formato:</label>
+            <select id="format" name="format" required>
+                <option value="mp3">MP3</option>
+                <option value="mp4">MP4</option>
+                <option value="mkv">MKV</option>
+                <option value="ogg">OGG</option>
+            </select>
+            
+            <label for="quality">Selecione a qualidade:</label>
+            <select id="quality" name="quality" required>
+                <option value="low">Baixa</option>
+                <option value="medium">Média</option>
+                <option value="high">Alta</option>
+                <option value="original">Original</option>
+            </select>
+            
+            <button type="submit">Baixar</button>
+        </form>
+    </main>
+    <!-- Fim do Main Content -->
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 SpeedUpDownloader - Desenvolvido por Matheus Assuncao.</p>
+    </footer>
+    <!-- Fim do Footer -->
+
+    <script src="./js/index.js"></script>
+    <script>
+        function toggleMenu() {
+            const ul = document.querySelector('nav ul');
+            ul.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
